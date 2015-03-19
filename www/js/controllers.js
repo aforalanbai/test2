@@ -1,83 +1,48 @@
-Kinoto.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+angular.module('starter.controllers', [])
 
-    // Ionic uses AngularUI Router which uses the concept of states
-    // Learn more here: https://github.com/angular-ui/ui-router
-    // Set up the various states which the app can be in.
-    // Each state's controller can be found in controllers.js
-    $stateProvider
-        .state('home', {
-            url: "/home",
-            templateUrl: "templates/template/home.html",
-            controller: 'HomeCtrl'
-        })
-        .state('register',{
-            url:'/register',
-            templateUrl:"templates/template/registration.html",
-            controller:'RegisterCtrl'
-        })
-        .state('registerSelect',{
-            url:'/registerSelect',
-            templateUrl:"templates/template/registerSelect.html",
-            controller:'RegisterSelectCtrl'
-        })
-        .state('signIn',{
-            url:'/signIn',
-            templateUrl:"templates/template/signIn.html",
-            controller:'signInCtrl'
-        })
-        .state('driverEntry',{
-            url:'/driverEntry',
-            templateUrl:"templates/template/driverEntry.html",
-            controller:'DriverEntryCtrl'
-        })
-        .state('senderEntry',{
-            url:'/senderEntry',
-            templateUrl:"templates/template/senderEntry.html",
-            controller:'SenderEntryCtrl'
-        })
-        .state('menu', {
-            url: "/menu",
-            abstract: true,
-            templateUrl: "templates/template/menu.html"
-        })
-      /*  .state('confirmationOrder',{
-            url:'/confirmationOrder',
-            templateUrl:"templates/template/confirmationOrder.html",
-            controller:'ConfirmationOrderCtrl'
-        })*/
-        .state('menu.confirmationOrder', {
-            url: "/confirmationOrder",
-            views: {
-                'menuContent' :{
-                    templateUrl:"templates/template/confirmationOrder.html",
-                    controller:'ConfirmationOrderCtrl'
-                }
-            }
-        })
-        .state('menu.detailMap', {
-            url: "/detailMap",
-            views: {
-                'menuContent' :{
-                    templateUrl:"templates/template/detailMap.html",
-                    controller:'DetailMapCtrl'
-                }
-            }
-        })
-        .state('menu.senderOrderInfo', {
-            url: "/senderOrderInfo",
-            views: {
-                'menuContent' :{
-                    templateUrl:"templates/template/senderOrderInfo.html",
-                    controller:'SenderOrderInfoCtrl'
-                }
-            }
-        })
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+  // Form data for the login modal
+  $scope.loginData = {};
 
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/login.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
 
-    // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/home');
-    $ionicConfigProvider.backButton.text('Go Back').icon('ion-chevron-left');
-    $ionicConfigProvider.views.transition('platform');
+  // Triggered in the login modal to close it
+  $scope.closeLogin = function() {
+    $scope.modal.hide();
+  };
 
+  // Open the login modal
+  $scope.login = function() {
+    $scope.modal.show();
+  };
+
+  // Perform the login action when the user submits the login form
+  $scope.doLogin = function() {
+    console.log('Doing login', $scope.loginData);
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeLogin();
+    }, 1000);
+  };
+})
+
+.controller('PlaylistsCtrl', function($scope) {
+  $scope.playlists = [
+    { title: 'Reggae', id: 1 },
+    { title: 'Chill', id: 2 },
+    { title: 'Dubstep', id: 3 },
+    { title: 'Indie', id: 4 },
+    { title: 'Rap', id: 5 },
+    { title: 'Cowbell', id: 6 }
+  ];
+})
+
+.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
-

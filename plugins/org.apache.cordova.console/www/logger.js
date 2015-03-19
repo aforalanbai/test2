@@ -258,7 +258,7 @@ logger.logLevel = function(level /* , ... */) {
  * Any remaining arguments will be appended to the formatted string.
  *
  * for rationale, see FireBug's Console API:
- *    http://getfirebug.com/wiki/index.Api/Console_API
+ *    http://getfirebug.com/wiki/index.php/Console_API
  */
 logger.format = function(formatString, args) {
     return __format(arguments[0], [].slice.call(arguments,1)).join(' ');

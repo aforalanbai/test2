@@ -1,7 +1,7 @@
 {
-  "name": "example",
+  "name": "ustglobal",
   "version": "1.0.0",
-  "description": "example: An Ionic project",
+  "description": "ustglobal: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
