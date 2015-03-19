@@ -1,0 +1,63 @@
+<ion-view view-title="Home" class="kinoto-app-bg" hide-nav-bar="true">
+    <ion-content>
+        <app-map style="height:250px; box-shadow:inset 0 0 10px #000000;" center="basel" zoom="1"  origin="{{ Driver.start }}" destination="{{Driver.end}}" >
+        </app-map>
+        <div class="row" style="background-color: #ffffff;">
+            <div class=" col col-10">
+                <div class="kinoto-locations" align="center">
+                    <img src="img/2.png" width="15" height="15" style="margin-top: 27px;">
+                </div>
+                <div class="kinoto-locations" align="center">
+                    <img src="img/3.png">
+                </div>
+                <div class="kinoto-locations" align="center">
+                    <img src="img/1.png" width="15" height="15">
+                </div>
+
+            </div>
+            <div class="col col-80">
+                <div style="width: 100%;">
+                    <div class="list kinoto-no-border">
+                        <label class="item item-input" style="border-bottom: #dddddd solid thin !important;">
+                            <input type="text" placeholder="Starting Address" ng-autocomplete class="form-control" ng-model="Driver.start">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text" placeholder="Ending Address" ng-autocomplete class="form-control" ng-model="Driver.end">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-10"  style="background-image: url('img/goto1.png'); background-size: 100% 100%">
+
+            </div>
+        </div>
+        <div class="row" style="background-color: #ffffff;">
+            <div class="tabs kinoto-tabs" >
+                <a class="tab-item" ng-click="selectVehicle(1);" ng-class="{'kinoto-active-tab':Vehicle==1}">
+                    <i class="icon ion-android-car"></i>
+                </a>
+                <a class="tab-item"  ng-click="selectVehicle(2);" ng-class="{'kinoto-active-tab':Vehicle==2}">
+                    <i class="icon ion-android-train"></i>
+                </a>
+                <a class="tab-item"  ng-click="selectVehicle(3);" ng-class="{'kinoto-active-tab':Vehicle==3}">
+                    <i class="icon ion-android-walk"></i>
+                </a>
+                <a class="tab-item"  ng-click="selectVehicle(4);" ng-class="{'kinoto-active-tab':Vehicle==4}">
+                    <i class="icon ion-android-bicycle"></i>
+                </a>
+                <a class="tab-item"  ng-click="selectVehicle(5);" ng-class="{'kinoto-active-tab':Vehicle==5}">
+                    <i class="icon ion-android-boat"></i>
+                </a>
+                <a class="tab-item"  ng-click="selectVehicle(6);" ng-class="{'kinoto-active-tab':Vehicle==6}">
+                    <i class="icon ion-android-plane"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="list list-inset  kinoto-input" align="center">
+            <img src="img/start.png" width="40%" ng-click="submitDriverEntry(Driver);" style="margin-top: 20px;">
+        </div>
+    </ion-content>
+</ion-view>
+

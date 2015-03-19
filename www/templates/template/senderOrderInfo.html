@@ -1,0 +1,73 @@
+<ion-view view-title="Confirmation Order" class="kinoto-app-bg" hide-back-button="true">
+    <ion-content class="kinoto-has-no-header">
+        <app-map style="height:250px; box-shadow:inset 0 0 10px #000000;" center="basel" zoom="1"
+                 origin="{{ senderDetails.start }}" destination="{{ senderDetails.end }}">
+        </app-map>
+        <div class="row" style="background-color: #ffffff; color: #4a4a4a;">
+            <div class="col col-33 ">
+                <p>Pickup</p>
+            </div>
+            <div class="col col-33 kinoto-tags">
+                <p>Date:{{senderDetails.pickupDate  }}</p>
+            </div>
+            <div class="col col-33 kinoto-tags">
+                <p>Time:{{ senderDetails.pickupTime }}</p>
+            </div>
+        </div>
+        <div class="row" style="background-color: #ffffff; color: #4a4a4a;">
+            <div class="col col-33 ">
+                <p>Delivery</p>
+            </div>
+            <div class="col col-33 kinoto-tags">
+                <p>Date:{{senderDetails.deliveryDate  }}</p>
+            </div>
+            <div class="col col-33 kinoto-tags">
+                <p>Time:{{ senderDetails.deliveryTime }}</p>
+            </div>
+        </div>
+        <div class="row" style="background-color: #ffffff;">
+            <div class=" col col-10">
+                <div class="kinoto-locations" align="center">
+                    <img src="img/2.png" width="15" height="15" style="margin-top: 27px;">
+                </div>
+                <div class="kinoto-locations" align="center">
+                    <img src="img/3.png">
+                </div>
+                <div class="kinoto-locations" align="center">
+                    <img src="img/1.png" width="15" height="15">
+                </div>
+
+            </div>
+            <div class="col col-80">
+                <div style="width: 100%;">
+                    <div class="list kinoto-no-border">
+                        <label class="item item-input" style="border-bottom: #dddddd solid thin !important;">
+                            <input type="text" disabled placeholder="Starting Address" ng-autocomplete class="form-control" ng-model="senderDetails.start">
+                        </label>
+                        <label class="item item-input">
+                            <input type="text" disabled placeholder="Ending Address" ng-autocomplete class="form-control" ng-model="senderDetails.end">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-10"  style="background-image: url('img/goto1.png'); background-size: 100% 100%">
+
+            </div>
+        </div>
+        <div class="row" style="background-color: #ffffff; color: #4a4a4a;">
+            <div class="col col-34 ">
+                <p>Parcel Type:</p>
+            </div>
+            <div class="col col-50 kinoto-tags">
+                <p>{{senderDetails.parcel}}</p>
+            </div>
+
+        </div>
+
+        <div class="list list-inset  kinoto-input" align="center">
+            <img src="img/accept-order.png" width="40%"  style="margin-top: 20px;">
+        </div>
+
+    </ion-content>
+</ion-view>
+

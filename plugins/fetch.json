@@ -16,11 +16,5 @@
             "type": "registry",
             "id": "com.ionic.keyboard"
         }
-    },
-    "org.apache.cordova.splashscreen": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.splashscreen"
-        }
     }
 }

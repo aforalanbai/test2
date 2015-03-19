@@ -1,0 +1,55 @@
+<ion-view view-title="Home" class="kinoto-app-bg" hide-nav-bar="true">
+    <ion-content >
+        <div class="row">
+            <div class="col" align="center">
+                <img src="img/logo.png" width="40%" style="margin-top: 30px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align: center">
+                <h3 class="kinoto-header">Registration</h3>
+            </div>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="text" placeholder="First Name" ng-model="userReg.firstName">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="text" placeholder="Last Name" ng-model="userReg.lastName">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="email" placeholder="Email" ng-model="userReg.email">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="number" placeholder="Phone Number" ng-model="userReg.phone" ng-minlength="10" ng-maxlength="10">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="userReg.password">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <label class="item item-input">
+                <input type="password" placeholder="Confirm Password" ng-model="userReg.cPassword">
+            </label>
+        </div>
+        <input type="hidden" ng-click="userReg.type">
+        <div class="list list-inset  kinoto-input"  align="center">
+            <img src="img/signUp-Btn.png" width="40%" ng-click="registration(userReg);">
+        </div>
+        <button class="button button-clear button-stable button-block kinoto-app-clear-btn" ng-click="goToSignIn();">
+            Already a member
+        </button>
+        <button class="button button-clear button-stable button-block kinoto-app-clear-btn" ng-click="forgotPassword()">
+            Forgot Password
+        </button>
+    </ion-content>
+</ion-view>
+

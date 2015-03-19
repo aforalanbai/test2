@@ -1,1 +1,151 @@
 /* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: myraidPro;
+    src: url("fonts/myraidpro/MYRIADPRO-REGULAR.OTF") format("opentype");
+}
+body{
+    color: #ffffff;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+    height: 45px !important;
+}
+.kinoto-app-bg{
+    background-image: url("../img/bg.png") !important;
+    background-size: 100% 100% !important;
+}
+.kinoto-app-login-slider{
+    background-image: url("../img/login-btn-bck.png") !important;
+    height: 90px !important;
+    background-size: 100% 100% !important;
+    margin-top: 60px!important;
+}
+.kinoto-app-login-slider-center{
+    background-size: 100% 100% !important;
+    background-image: url("../img/center-btn.png") !important;
+    height: 80px !important;
+}
+.kinoto-app-login-slider-name{
+    font-size: 11px;
+    margin-top: 20px;
+    font-family: myraidPro;
+}
+.kinoto-icon{
+    margin-top: 28px;
+    height: 5px;
+}
+.kinoto-arrow-left{
+    background-image: url("../img/arrow.png");
+    width: 100%;
+    background-size: 100% 100%;
+}
+.kinoto-arrow-right{
+    background-image: url("../img/arrow.png");
+    width: 100%;
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.kinoto-app-login-slider .col .row{
+    padding: 0;
+}
+.kinoto-input{
+    background-color:  transparent !important;
+    padding: 1px 30px !important;
+}
+.kinoto-input .item-input{
+    background-color: transparent !important;
+    border: #000000 solid thin !important;
+    padding: 0 !important;
+    height: 45px !important;
+}
+.kinoto-input .item-input input::-moz-placeholder, .kinoto-input .item-input textarea::-moz-placeholder{
+    text-align: center;
+}
+.kinoto-input .item.item-input input{
+    text-align: center;
+    padding-right: 0 !important;
+}
+.kinoto-app-clear-btn{
+    line-height: 26px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: 10px !important;
+}
+.kinoto-warning{
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #000000;
+}
+.kinoto-success{
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #000000;
+}
+.kinoto-no-border .item-input{
+    /*border: none;*/
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    margin-bottom: 1px;
+}
+.kinoto-tabs{
+    z-index: 0 !important;
+    position: relative !important;
+    width: 60% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    border: #dddddd solid thin !important;
+    height: 30px !important;
+    line-height: 25px !important;
+}
+.kinoto-tabs .tab-item{
+    border-right: #dddddd solid thin !important;
+}
+.kinoto-tabs .tab-item i{
+    font-size: 15px !important;
+}
+.kinoto-active-tab{
+    /*background-color: #0c63ee;*/
+    border-bottom: #0c63ee solid 2px;
+}
+.kinoto-locations{
+    width:100%;
+    float: left;
+}
+.kinoto-header{
+    font-family:myraidPro !important;
+}
+.bar-header {
+    /*background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5) !important;*/
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-bottom-width: 0;
+    height: 60px;
+    padding-top: 19px;
+}
+.kinoto-has-no-header{
+    top: 0 !important;
+}
+.bar .title{
+    line-height: 68px !important;
+    font-family:myraidPro !important;
+}
+.menu{
+    background-color: rgba(0,0,0,.5) !important;
+}
+.kinoto-has-header{
+    top: 60px !important;
+}
+.title{
+    color: #ffffff !important;
+}
+.kinoto-list .item{
+    background-color: transparent !important;
+}
+.kinoto-tags p{
+    color: #4a4a4a;
+    background-color: #e7ecef;
+    font-size: 12px;
+    text-align: center;
+}

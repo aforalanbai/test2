@@ -1,0 +1,34 @@
+<ion-view view-title="Home" class="kinoto-app-bg" hide-nav-bar="true">
+    <ion-content >
+        <div class="row">
+            <div class="col" align="center">
+                <img src="img/logo.png" width="40%" style="margin-top: 30px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align: center">
+                <h3  class="kinoto-header" >Sign In</h3>
+            </div>
+        </div>
+        <div class="list list-inset kinoto-input ">
+            <label class="item item-input">
+                <input type="email" placeholder="First Name" ng-model="userSign.email">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input ">
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="userSign.password">
+            </label>
+        </div>
+        <div class="list list-inset  kinoto-input"  align="center">
+            <img src="img/signIn-Btn.png" width="40%" ng-click="signIn(userSign);">
+        </div>
+        <button class="button button-clear button-stable button-block kinoto-app-clear-btn" ng-click="goToSignUp();">
+            Sign Up
+        </button>
+        <button class="button button-clear button-stable button-block kinoto-app-clear-btn" ng-click="forgotPassword()">
+            Forgot Password
+        </button>
+    </ion-content>
+</ion-view>
+

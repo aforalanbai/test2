@@ -1,0 +1,57 @@
+<ion-view view-title="Home" class="kinoto-app-bg" hide-nav-bar="true">
+    <ion-content>
+        <!--<div class="row">
+            <div class="col" align="center">
+                <img src="img/logo.png" width="40%" style="margin-top: 30px;">
+            </div>
+        </div>-->
+        <div class="list list-inset kinoto-input">
+            <p>Pickup date</p>
+            <label class="item item-input">
+                <input type="date"   ng-model="sender.pickupDate">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Pickup Time</p>
+            <label class="item item-input">
+                <input type="time"  ng-model="sender.pickupTime">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Delivery date</p>
+            <label class="item item-input">
+                <input type="date"  ng-model="sender.deliveryDate">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Delivery time</p>
+            <label class="item item-input">
+                <input type="time"  ng-model="sender.deliveryTime">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Starting Address</p>
+            <label class="item item-input">
+                <input type="text"  ng-autocomplete class="form-control"  ng-model="sender.start">
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Ending Address</p>
+            <label class="item item-input">
+                <input type="text"  ng-autocomplete class="form-control"  ng-model="sender.end" >
+            </label>
+        </div>
+        <div class="list list-inset kinoto-input">
+            <p>Type of Parcel</p>
+            <label class="item item-input">
+                <input type="text"  ng-model="sender.parcel">
+            </label>
+        </div>
+
+        <input type="hidden" ng-click="userReg.type">
+        <div class="list list-inset  kinoto-input"  align="center">
+            <img src="img/start.png" width="40%" ng-click="submitSenderEntry(sender);">
+        </div>
+    </ion-content>
+</ion-view>
+
